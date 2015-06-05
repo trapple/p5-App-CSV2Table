@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use App::CSV2Table;
+
+App::CSV2Table->run(@ARGV);
+
+__END__
