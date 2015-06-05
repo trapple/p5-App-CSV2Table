@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "CLI software for printing ascii table from csv ",
    "author" : [
-      "masuda <masuda@vivi-design.com>"
+      "trapple <trapplejp@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.142060",
@@ -42,7 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Data::Table" : "1.72",
+            "Text::UnicodeTable::Simple" : "0.09"
          }
       },
       "test" : {
@@ -52,5 +53,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/trapple/p5-App-CSV2Table/issues"
+      },
+      "homepage" : "https://github.com/trapple/p5-App-CSV2Table",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/trapple/p5-App-CSV2Table.git",
+         "web" : "https://github.com/trapple/p5-App-CSV2Table"
+      }
+   },
    "version" : "0.01"
 }

@@ -42,15 +42,20 @@ __END__
 
 =head1 NAME
 
-App::CSV2Table - It's new $module
+App::CSV2Table - CLI software for printing ascii table from csv 
 
 =head1 SYNOPSIS
 
-    use App::CSV2Table;
+    csv2table your_csv_file.csv
+
+    or
+
+    nkf -w your_csv_file | csv2table
 
 =head1 DESCRIPTION
 
-App::CSV2Table is ...
+App::CSV2Table is a CLI software for pirnting ascii table from csv
+which accepts a filename or stdin, and only accepts utf-8.
 
 =head1 LICENSE
 
@@ -61,7 +66,7 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-masuda E<lt>trapplejp@gmail.comE<gt>
+trapple E<lt>trapplejp@gmail.comE<gt>
 
 =cut
 
