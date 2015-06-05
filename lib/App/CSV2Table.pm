@@ -8,6 +8,8 @@ use Text::UnicodeTable::Simple;
 
 our $VERSION = "0.01";
 
+binmode STDOUT, ':utf8';
+
 sub run {
   my $self = shift;
   my @args = @_;
@@ -18,13 +20,13 @@ sub run {
       print "cannot find file: $args[0]", "\n";
       exit;
     }
-    $data = Data::Table::fromCSV( $args[0], 0 );
+    $data = Data::Table::fromCSV( $args[0], 1 );
   } else {
-    $data = Data::Table::fromCSV(\*STDIN, 0);
+    $data = Data::Table::fromCSV(\*STDIN, 1);
   }
-  $table = Text::UnicodeTable::Simple->new();
 
-  $table->setCols($data->header);
+  $table = Text::UnicodeTable::Simple->new();
+  $table->set_header($data->header);
   my $it = $data->iterator();
   while(my $row = $it->()){
     my @row = @$row{ $data->header };
